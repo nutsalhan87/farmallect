@@ -1,14 +1,16 @@
 package ru.nutsalhan87.farmallect.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import ru.nutsalhan87.farmallect.model.communication.*;
 import ru.nutsalhan87.farmallect.model.medicament.MedicamentDTO;
-import ru.nutsalhan87.farmallect.model.properties.*;
+import ru.nutsalhan87.farmallect.model.properties.Contraindication;
+import ru.nutsalhan87.farmallect.model.properties.Indication;
+import ru.nutsalhan87.farmallect.model.properties.Ingridient;
+import ru.nutsalhan87.farmallect.model.properties.SideEffect;
 import ru.nutsalhan87.farmallect.service.*;
 
 import java.util.List;
@@ -43,6 +45,7 @@ public class MedicamentController {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token is not correct");
         }
     }
+
     @GetMapping("/medicament/{id}")
     public MedicamentDTO medicament(@PathVariable Long id) {
         return medicamentService.getMedicament(id);

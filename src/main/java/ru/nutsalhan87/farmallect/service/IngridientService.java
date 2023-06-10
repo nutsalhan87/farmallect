@@ -1,10 +1,8 @@
 package ru.nutsalhan87.farmallect.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.nutsalhan87.farmallect.model.properties.Indication;
 import ru.nutsalhan87.farmallect.model.properties.Ingridient;
 import ru.nutsalhan87.farmallect.repository.IngridientRepository;
 

@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import ru.nutsalhan87.farmallect.model.properties.IncompatibleIngridients;
-import ru.nutsalhan87.farmallect.model.properties.Ingridient;
 
 @Repository
 public interface IncompatibleIngridientsRepository extends JpaRepository<IncompatibleIngridients, Long> {

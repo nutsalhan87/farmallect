@@ -1,11 +1,12 @@
 package ru.nutsalhan87.farmallect.model.properties;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import ru.nutsalhan87.farmallect.model.medicament.Medicament;
-import ru.nutsalhan87.farmallect.service.IngridientService;
 
 import java.util.ArrayList;
 import java.util.List;

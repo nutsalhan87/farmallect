@@ -2,11 +2,8 @@ package ru.nutsalhan87.farmallect.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
-import ru.nutsalhan87.farmallect.model.communication.AddIncompatibleRequest;
 import ru.nutsalhan87.farmallect.model.communication.CompatibilityResponse;
 import ru.nutsalhan87.farmallect.model.communication.MedicamentsCompatibilityCheck;
 import ru.nutsalhan87.farmallect.model.medicament.Medicament;
@@ -17,7 +14,6 @@ import ru.nutsalhan87.farmallect.repository.MedicamentRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.function.Supplier;
 
 @Service
 public class IncompatibleIngridientsService {
@@ -46,7 +42,7 @@ public class IncompatibleIngridientsService {
             }
             return new CompatibilityResponse(true);
         } catch (NoSuchElementException neexc) {
-            return  new CompatibilityResponse(true);
+            return new CompatibilityResponse(true);
         }
     }
 
