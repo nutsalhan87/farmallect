@@ -13,13 +13,13 @@ public class MedicamentRequest {
     private List<String> country;
     private List<String> form;
     private List<String> ingridients;
-    private boolean ingridientsBoth;
+    private boolean ingridientsAll;
     private List<String> indications;
-    private boolean indicationsBoth;
+    private boolean indicationsAll;
     private List<String> sideEffects;
-    private boolean sideEffectsBoth;
+    private boolean sideEffectsAll;
     private List<String> contraindications;
-    private boolean contraindicationsBoth;
+    private boolean contraindicationsAll;
     private int page;
     private int size;
 }

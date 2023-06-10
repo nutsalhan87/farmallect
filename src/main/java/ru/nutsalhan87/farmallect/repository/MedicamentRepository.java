@@ -1,15 +1,18 @@
 package ru.nutsalhan87.farmallect.repository;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import ru.nutsalhan87.farmallect.model.medicament.Medicament;
 
 import java.util.List;
 
 @Repository
-public interface MedicamentRepository extends JpaRepository<Medicament, Long> {
+public interface MedicamentRepository extends JpaRepository<Medicament, Long>, MedicamentDynamicRepository {
     @Query("select distinct med.company from Medicament med")
     List<String> getCompanies();
 
